@@ -1,0 +1,133 @@
+:root {
+  color-scheme: light;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #f2f5f7;
+  color: #1f2937;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+header p {
+  margin: 12px auto 0;
+  max-width: 700px;
+  line-height: 1.7;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.diagram-card,
+.info-card,
+.quiz-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 22px;
+}
+.diagram-card h2,
+.info-card h2,
+.quiz-card h2 {
+  margin-top: 0;
+}
+.diagram-wrapper {
+  display: grid;
+  place-items: center;
+  padding: 12px 0 4px;
+}
+.body-svg {
+  width: 100%;
+  max-width: 380px;
+}
+.organ.active {
+  fill: #ffe4b3;
+  stroke: #c77a1b;
+  stroke-width: 3;
+}
+.intro-box {
+  min-height: 220px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fbfbff;
+  line-height: 1.8;
+}
+.quiz-area {
+  display: grid;
+  gap: 16px;
+}
+.knowledge-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 22px;
+  margin-top: 24px;
+}
+#choices {
+  display: grid;
+  gap: 12px;
+}
+.choice-button,
+.button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  font-size: 1rem;
+}
+.choice-button:hover,
+.button:hover {
+  background: #f8fafc;
+}
+.choice-button.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+.choice-button.correct {
+  border-color: #16a34a;
+  background: #dcfce7;
+}
+.choice-button.wrong {
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+.button {
+  max-width: 180px;
+}
+.result {
+  padding: 14px;
+  border-radius: 16px;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  border: 1px solid #bae6fd;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

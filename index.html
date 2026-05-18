@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人體器官互動圖</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>人體器官互動圖</h1>
+      <p>點選人體圖上的器官，查看簡單介紹，並完成小測驗。</p>
+    </header>
+
+    <section class="content">
+      <div class="diagram-card">
+        <h2>點選器官</h2>
+        <div class="diagram-wrapper">
+          <svg viewBox="0 0 260 520" class="body-svg" aria-label="人體器官示意圖">
+            <defs>
+              <style>
+                .body { fill: #f9e2d2; stroke: #a66; stroke-width: 2; }
+                .organ { fill: #f6c9c2; stroke: #923; stroke-width: 1.5; cursor: pointer; }
+                .organ:hover { fill: #ffcbc3; }
+                .label { font: 10px sans-serif; fill: #333; }
+              </style>
+            </defs>
+            <rect x="60" y="20" width="140" height="460" rx="70" ry="70" class="body" />
+            <circle cx="130" cy="60" r="30" class="organ" data-organ="brain" />
+            <rect x="90" y="100" width="100" height="80" rx="18" ry="18" class="organ" data-organ="lungs" />
+            <ellipse cx="130" cy="200" rx="55" ry="40" class="organ" data-organ="heart" />
+            <rect x="85" y="250" width="110" height="60" rx="20" ry="20" class="organ" data-organ="liver" />
+            <ellipse cx="130" cy="350" rx="60" ry="30" class="organ" data-organ="stomach" />
+            <g data-organ="kidneys" class="organ">
+              <ellipse cx="100" cy="410" rx="20" ry="30" />
+              <ellipse cx="160" cy="410" rx="20" ry="30" />
+            </g>
+            <text x="130" y="55" text-anchor="middle" class="label">腦</text>
+            <text x="130" y="135" text-anchor="middle" class="label">肺</text>
+            <text x="130" y="205" text-anchor="middle" class="label">心</text>
+            <text x="130" y="280" text-anchor="middle" class="label">肝</text>
+            <text x="130" y="355" text-anchor="middle" class="label">胃</text>
+            <text x="130" y="430" text-anchor="middle" class="label">腎</text>
+          </svg>
+        </div>
+      </div>
+
+      <aside class="info-card">
+        <h2>器官介紹</h2>
+        <div id="organIntro" class="intro-box">
+          <p>請點選左側人體圖上的器官名稱，查看器官功能與介紹。</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="quiz-card">
+      <h2>小測驗</h2>
+      <div id="quizArea" class="quiz-area">
+        <p id="questionText">準備好了，開始測驗吧！</p>
+        <div id="choices" class="choices"></div>
+        <button id="nextBtn" class="button" type="button">下一題</button>
+      </div>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="knowledge-card">
+      <h2>小知識</h2>
+      <div id="knowledgeArea" class="intro-box">
+        <p>每次點擊「下一個小知識」都會看到一條新的人體器官趣味資訊。</p>
+      </div>
+      <button id="factBtn" class="button" type="button">下一個小知識</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
