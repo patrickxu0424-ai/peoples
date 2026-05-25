@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
   font-family: 'Noto Sans TC', sans-serif;
-  background: #f2f5f7;
-  color: #1f2937;
+  background: radial-gradient(circle at top, #fff4ff 0%, #f7d9f3 40%, #d7b2d7 100%);
+  color: #2c1637;
 }
 * {
   box-sizing: border-box;
@@ -10,6 +10,11 @@
 body {
   margin: 0;
   min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.45) 0, transparent 20%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.30) 0, transparent 18%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 28px);
+  background-blend-mode: screen;
 }
 .container {
   max-width: 1080px;
@@ -38,15 +43,18 @@ header p {
 .diagram-card,
 .info-card,
 .quiz-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(185, 112, 170, 0.16);
   border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 48px rgba(78, 20, 81, 0.08);
   padding: 22px;
+  backdrop-filter: blur(10px);
 }
 .diagram-card h2,
 .info-card h2,
 .quiz-card h2 {
   margin-top: 0;
+  color: #5e2c5d;
 }
 .diagram-wrapper {
   display: grid;
@@ -62,12 +70,18 @@ header p {
   stroke: #c77a1b;
   stroke-width: 3;
 }
+.brain-organ.active {
+  fill: #eec6ff;
+  stroke: #7c2684;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 18px rgba(156, 75, 159, 0.35));
+}
 .intro-box {
   min-height: 220px;
   padding: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(173, 122, 167, 0.18);
   border-radius: 16px;
-  background: #fbfbff;
+  background: rgba(255, 245, 255, 0.86);
   line-height: 1.8;
 }
 .quiz-area {
@@ -75,9 +89,10 @@ header p {
   gap: 16px;
 }
 .knowledge-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(185, 112, 170, 0.16);
   border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 40px rgba(78, 20, 81, 0.08);
   padding: 22px;
   margin-top: 24px;
 }
@@ -89,21 +104,22 @@ header p {
 .button {
   width: 100%;
   text-align: left;
-  border: 1px solid #d1d5db;
+  border: 1px solid rgba(156, 75, 159, 0.22);
   border-radius: 14px;
   padding: 14px 16px;
   background: #fff;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
   font-size: 1rem;
 }
 .choice-button:hover,
 .button:hover {
-  background: #f8fafc;
+  background: #f7e7fb;
+  transform: translateY(-1px);
 }
 .choice-button.selected {
-  border-color: #2563eb;
-  background: #eff6ff;
+  border-color: #9d4db4;
+  background: #f3d6f5;
 }
 .choice-button.correct {
   border-color: #16a34a;
