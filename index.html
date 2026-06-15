@@ -25,149 +25,94 @@
                 <stop offset="100%" stop-color="#b66cc6" />
               </linearGradient>
               <style>
-                .body { fill: #fde8f8; stroke: #d99ac1; stroke-width: 2; }
+                .body { fill: none; stroke: #2c1637; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
                 .organ { fill: #f8d3ff; stroke: #b56aa8; stroke-width: 1.5; cursor: pointer; transition: fill 0.2s ease, stroke 0.2s ease; }
                 .brain-organ { fill: url(#brainGradient); stroke: #913a83; stroke-width: 2; filter: drop-shadow(0 0 8px rgba(183, 94, 167, 0.45)); }
                 .organ:hover { fill: #fcd5f6; stroke: #a55195; }
                 .label { font: 10px sans-serif; fill: #3a1b38; }
               </style>
             </defs>
-            <path class="body" d="M130 24
-              c-20 0 -36 16 -36 36
-              s16 36 36 36
-              s36-16 36-36
-              s-16-36 -36-36
-            z
-            M92 90
-              c-20 24 -24 64 -24 96
-              c0 22 14 30 24 30
-              h6
-              c0 0 0 30 0 60
-              c0 16 10 26 24 26
-              h76
-              c14 0 24-10 24-26
-              v-60
-              h6
-              c10 0 24-8 24-30
-              c0-32 -4-72 -24-96
-              c-10-14 -22-22 -38-22
-              c-14 0 -26 8 -36 22
-              c-10-14 -22-22 -36-22
-              c-16 0 -28 8 -38 22
-            z
-            M98 238
-              c-6 32 -10 66 -10 92
-              c0 12 8 18 18 18
-              h10
-              v46
-              h20
-              v-46
-              h10
-              c10 0 18-6 18-18
-              c0-26 -4-60 -10-92
-              c-4 -16 -8 -28 -18-28
-              c-10 0 -14 12 -18 28
-            z" />
-            <path class="organ brain-organ" data-organ="brain" d="M130 42
-              c-18 0 -34 12 -34 30
-              c0 8 -4 12 -10 12
-              c-8 0 -14 8 -14 16
-              c0 8 6 16 14 16
-              c4 0 8-2 10-6
-              c8 0 10 6 22 6
-              c12 0 14-6 22-6
-              c2 4 6 6 10 6
-              c8 0 14-8 14-16
-              c0-8 -6-16 -14-16
-              c-6 0 -10-4 -10-12
-              c0-18 16-30 34-30
-              c18 0 34 12 34 30
-              c0 8 -4 12 -10 12
-              c-8 0 -14 8 -14 16
-              c0 8 6 16 14 16
-              c6 0 10-4 10-12
-              c0-18 -16-30 -34-30
-              z" />
+            <circle class="body" cx="130" cy="80" r="60" />
+            <path class="body" d="M68 182 C58 172, 52 150, 58 124 C72 96, 104 92, 132 122" />
+            <path class="body" d="M192 182 C202 172, 208 150, 202 124 C188 96, 156 92, 128 122" />
+            <path class="body" d="M130 122 L130 224" />
+            <path class="body" d="M94 224 C92 258, 84 298, 84 348 L84 473" />
+            <path class="body" d="M166 224 C168 258, 176 298, 176 348 L176 473" />
+            <g class="organ brain-organ" data-organ="brain">
+              <!-- 大腦外層輪廓 -->
+              <path d="M90 55 C70 60, 70 95, 90 105 C95 110, 120 110, 125 105 C130 100, 135 110, 150 110 C170 110, 185 100, 185 80 C185 65, 175 50, 155 48 C150 45, 140 40, 130 42 C120 44, 110 50, 100 48 C95 47, 92 53, 90 55 Z"
+                    fill="none" stroke="inherit" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- 內部腦迴紋理 -->
+              <path d="M95 68 C105 72, 110 86, 120 82 C128 78, 130 94, 140 92" fill="none" stroke="inherit" stroke-width="2" stroke-linecap="round"/>
+              <path d="M108 92 C118 96, 122 104, 132 100" fill="none" stroke="inherit" stroke-width="2" stroke-linecap="round"/>
+              <path d="M100 80 C90 92, 98 98, 110 96" fill="none" stroke="inherit" stroke-width="2" stroke-linecap="round"/>
+            </g>
             <g data-organ="lungs" class="organ">
               <path d="M90 118
-                c-18 -8 -34 6 -36 26
-                c-2 20 6 34 18 48
-                c8 10 18 14 24 24
-                c4 8 6 16 6 24
-                v16
-                c0 6 4 10 10 10
-                h14
-                c6 0 10-4 10-10
-                v-18
-                c0 -12 4-20 12-28
-                c12 -12 22 -26 20 -48
-                c-2 -18 -16 -30 -34 -28
-                z" />
+                C70 110 64 142 74 168
+                C82 190 96 204 112 208
+                C116 214 126 218 132 208
+                C144 190 148 156 136 132
+                C130 122 118 118 106 118
+                C98 118 94 117 90 118
+                Z" />
               <path d="M170 118
-                c18 -8 34 6 36 26
-                c2 20 -6 34 -18 48
-                c-8 10 -18 14 -24 24
-                c-4 8 -6 16 -6 24
-                v16
-                c0 6 -4 10 -10 10
-                h-14
-                c-6 0 -10-4 -10-10
-                v-18
-                c0 -12 -4-20 -12-28
-                c-12 -12 -22 -26 -20 -48
-                c2 -18 16 -30 34 -28
-                z" />
+                C190 110 196 142 186 168
+                C178 190 164 204 148 208
+                C144 214 134 218 128 208
+                C116 190 112 156 124 132
+                C130 122 142 118 154 118
+                C162 118 166 117 170 118
+                Z" />
               <path d="M130 150
-                v30
-                c0 8 4 12 10 12
-                h4
-                c6 0 10-4 10-12
-                v-30" />
+                v24
+                C130 176 128 182 122 188
+                C118 192 116 198 118 204
+                C120 210 124 214 130 214
+                C136 214 140 210 142 204
+                C144 198 142 192 138 188
+                C132 182 130 176 130 150
+                Z" />
             </g>
-            <path class="organ" data-organ="heart" d="M130 204
-              c-16 -18 -36 -22 -46 -8
-              c-8 10 -8 22 0 32
-              c8 8 18 18 24 24
-              c4 4 10 10 12 12
-              c2 -2 8 -8 12 -12
-              c6 -6 16 -16 24 -24
-              c8 -10 8 -22 0 -32
-              z" />
-            <path class="organ" data-organ="liver" d="M88 246
-              c20 -18 46 -24 72 -18
-              c18 4 32 14 42 26
-              c10 12 14 28 10 42
-              c-4 18 -18 28 -38 30
-              c-12 2 -24 0 -34 -6
-              c-10 -6 -20 -14 -30 -22
-              c-10 -8 -22 -14 -34 -16
-              c-16 -4 -28 -12 -34 -26
-              c-6 -14 -4 -30 8 -38
-              z" />
-            <path class="organ" data-organ="stomach" d="M102 338
-              c0 -28 18 -46 42 -46
-              c24 0 38 18 38 42
-              c0 14 -4 30 -12 38
-              c-8 8 -16 12 -24 16
-              c-8 4 -14 8 -18 16
-              c-4 10 -2 20 6 26
-              c10 8 22 6 32 0
-              c16 -10 24 -28 26 -50
-              c2 -22 -6 -40 -26 -52
-              c-20 -12 -40 -8 -46 12
-              c-4 14 0 22 2 28
-              c2 8 0 16 -2 20
-              c-4 6 -10 4 -10 -6
-              z" />
+            <path class="organ" data-organ="heart" d="M130 174
+              C108 145 70 150 70 184
+              C70 219 105 244 130 269
+              C155 244 190 219 190 184
+              C190 150 152 145 130 178
+              Z" />
+            <path class="organ" data-organ="liver" d="M90 292
+              C80 286 74 268 78 252
+              C82 236 92 222 108 218
+              C124 214 146 216 164 224
+              C176 230 188 236 190 246
+              C192 254 186 266 174 272
+              C164 278 148 282 132 284
+              C114 286 102 282 94 274
+              C90 272 92 274 90 292
+              Z" />
+            <path class="organ" data-organ="stomach" d="M114 342
+              C108 302 120 268 144 262
+              C168 256 194 270 198 292
+              C202 310 192 326 178 336
+              C166 344 148 348 134 346
+              C122 344 114 338 110 328
+              C108 320 110 312 116 306
+              C122 300 130 296 138 294
+              C148 292 156 292 162 298
+              C168 304 172 312 170 322
+              C166 332 158 338 148 342
+              C140 346 132 346 126 342
+              C120 338 116 334 114 342
+              Z" />
             <g data-organ="kidneys" class="organ">
-              <path d="M80 394
+              <path d="M80 338
                 c-18 -10 -30 8 -30 24
                 c0 18 12 30 28 30
                 c8 0 16 -4 20 -10
                 c6 -10 6 -22 2 -32
                 c-4 -8 -8 -14 -12 -18
                 z" />
-              <path d="M172 394
+              <path d="M172 338
                 c18 -10 30 8 30 24
                 c0 18 -12 30 -28 30
                 c-8 0 -16 -4 -20 -10
@@ -178,9 +123,9 @@
             <text x="130" y="55" text-anchor="middle" class="label">腦</text>
             <text x="130" y="135" text-anchor="middle" class="label">肺</text>
             <text x="130" y="205" text-anchor="middle" class="label">心</text>
-            <text x="130" y="280" text-anchor="middle" class="label">肝</text>
-            <text x="130" y="355" text-anchor="middle" class="label">胃</text>
-            <text x="130" y="430" text-anchor="middle" class="label">腎</text>
+            <text x="130" y="260" text-anchor="middle" class="label">肝</text>
+            <text x="130" y="335" text-anchor="middle" class="label">胃</text>
+            <text x="130" y="390" text-anchor="middle" class="label">腎</text>
           </svg>
         </div>
       </div>
